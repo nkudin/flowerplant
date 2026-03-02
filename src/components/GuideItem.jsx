@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import './GuideItem.css'
 
-export default function  GuideItem ({ guide, deleteHandler }) {
+export default function  GuideItem ({ guide, deleteHandler, showActions = true }) {
 
     return (
         <div className="guide">
@@ -17,6 +17,7 @@ export default function  GuideItem ({ guide, deleteHandler }) {
                     <p>Soil type: {guide.soil}</p>
                     <p>Difficulty: {guide.level}</p>
                 </div>
+                {showActions && (
                 <div className="guide-actions">
                     <div className="guide-actions-container">
                         <Link to={`/update/${guide.id}`}>Update guide</Link>
@@ -25,6 +26,7 @@ export default function  GuideItem ({ guide, deleteHandler }) {
                         <button onClick={() => deleteHandler(guide.id)}>Delete guide</button>
                     </div>
                 </div>
+                )}
             </div>
         </div>
         </div>

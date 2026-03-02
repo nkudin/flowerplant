@@ -1,5 +1,5 @@
 .footer {
-    background: #b9cbb4;
+    background: #355E3B; /* forest green */
     width: 100%;
     box-sizing: border-box;
     position: fixed;
@@ -17,25 +17,24 @@
 .title {
     margin: 0 0 8px 0;
     font-weight: 800;
-    color: black;
+    color: white; /* light text for contrast */
 }
 
 .para {
     margin: 6px 0;
-    color: rgb(32, 32, 32);
+    color: #e0e0e0; /* light gray text */
 }
 
 .label {
     font-weight: 700;
-    color: green;
+    color: #90ee90; /* light green */
 }
 
 .small {
     margin: 14px 0 0 0;
-    opacity: 0.7;
-    color: rgb(32, 32, 32);
+    opacity: 0.8;
+    color: #e0e0e0; /* light gray text */
 }
-
 .title,
 .para,
 .small {

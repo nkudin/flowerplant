@@ -1,7 +1,7 @@
 import GuideItem from "./GuideItem";
 import './GuideList.css';
 
-export default function GuideList({ guides, setGuides }) {
+export default function GuideList({ guides, setGuides, showActions = true }) {
 
     // When user press delete, the id is used to identify
     // the guide is excluded and a new version of the guide list is created.
@@ -19,6 +19,7 @@ export default function GuideList({ guides, setGuides }) {
                     key={guide.id}
                     guide={guide}
                     deleteHandler={deleteGuideHandler}
+                    showActions={showActions}
                 />
             ))}
         </div>
