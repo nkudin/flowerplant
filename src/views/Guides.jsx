@@ -35,14 +35,23 @@ function Guides() {
     }
   ];
 
-  // Initialize state with data from localStorage or the defaults
+  // Combine default guides and user-added guides from localStorage
   const [guides, setGuides] = useState(() => {
     const savedGuides = localStorage.getItem("guides");
+    let userGuides = [];
     if (savedGuides) {
-      const parsed = JSON.parse(savedGuides);
-      return Array.isArray(parsed) && parsed.length > 0 ? parsed : defaultGuides;
+      try {
+        const parsed = JSON.parse(savedGuides);
+        if (Array.isArray(parsed)) {
+          userGuides = parsed;
+        }
+      } catch (e) {
+        // ignore corrupted localStorage
+      }
     }
-    return defaultGuides;
+    // Filter out any default guides that have the same id as a user guide
+    const mergedGuides = [...defaultGuides.filter(def => !userGuides.some(u => u.id === def.id)), ...userGuides];
+    return mergedGuides;
   });
 
   // Load saved filter text from localStorage on local render
@@ -56,13 +65,15 @@ function Guides() {
     localStorage.setItem("filterText", filterText);
   }, [filterText]);
 
-  // Read the guides stored in webstorage/local storage
-  useEffect (() => {
+  // Save all guides to localStorage whenever they change
+  useEffect(() => {
     localStorage.setItem("guides", JSON.stringify(guides));
   }, [guides]);
 
   // Sort the guides in alphabetical order
-  const sortedGuides = guides.toSorted((a,b) =>
+  // toSorted is relatively new and may not exist in all browsers/environments
+  // fall back to a copy-and-sort so the original array isn't modified.
+  const sortedGuides = [...guides].sort((a,b) =>
     a.name.localeCompare(b.name, "en", { sensitivity: "base" })
   );
 

@@ -1,0 +1,76 @@
+form {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 600px;
+    top: 4rem;
+    padding: 2rem 1rem 15rem 1rem; /* increased bottom padding for footer clearance */
+    background-color: #e8f3e8;
+    border-radius: 8px;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+form h2 {
+    text-align: center;
+    color: #355E3B; /* forest green */
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-size: 1.8em;
+    border-bottom: 3px solid #4a7c59;
+    padding-bottom: 1rem;
+}
+
+form div {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    font-weight: 600;
+    color: #355E3B; /* forest green */
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+form input {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 2px solid #bae9a9;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: inherit;
+    transition: border-color 0.25s;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #4a7c59;
+    background-color: #f9fdf9;
+}
+
+form button {
+    background-color: #619b61; /* muted green to match guide buttons */
+    color: #333;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1em;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.25s;
+    align-self: center;
+    appearance: none;
+    font-family: inherit;
+}
+
+form button:hover {
+    background-color: #437b43; /* darker green on hover */
+}
+
+form button:focus {
+    outline: 4px auto -webkit-focus-ring-color;
+}

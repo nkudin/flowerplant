@@ -1,6 +1,6 @@
 .header {
     display: flex;
-    background: #b9cbb4;
+    background: #355E3B; /* forest green */
     position: absolute;
     align-items: center;
     justify-content: center;
@@ -14,10 +14,10 @@
 
 .link {
     margin: 10px 20px 10px 20px;
-    color: black;
+    color: white; /* light text for contrast */
 }
 
 .link:hover {
-    color: green;
+    color: #90ee90; /* light green on hover */
     text-decoration: underline;
 }
