@@ -4,6 +4,7 @@ import Create from "./views/Create";
 import Update from "./views/Update";
 import DefaultPage from "./views/DefaultPage";
 import Guides from "./views/Guides";
+import About from "./views/About";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: "/update/:id",
         element: <Update />
+      },
+      {
+        path: "/about",
+        element: <About />
       }
     ]
   }

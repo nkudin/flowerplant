@@ -4,13 +4,13 @@ import Footer from "./components/Footer";
 
 function Layout() {
     return (
-        <>
+        <div className="app">
             <Header />
             <main>
                 <Outlet />
             </main>
             <Footer />
-        </>
+        </div>
     )
 }
 

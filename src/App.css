@@ -1,3 +1,9 @@
+html,
+body,
+#root {
+  height: 100%;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -17,3 +23,18 @@
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
+
+/* App layout for sticky footer */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app main {
+  flex: 1 0 auto;
+  /* ensure content doesn't hide behind fixed footer */
+  padding-bottom: 120px;
+}
+
+
