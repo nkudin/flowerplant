@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    background: #b9cbb4;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    top:0;
+    width: 100%;
+}
+
+.nav {
+    padding: 10px 0 10px 0;
+}
+
+.link {
+    margin: 10px 20px 10px 20px;
+    color: black;
+}
+
+.link:hover {
+    color: green;
+    text-decoration: underline;
+}

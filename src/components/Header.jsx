@@ -1,14 +1,24 @@
 import { Link } from "react-router-dom";
+import Searchfield from "./Searchfield";
+import './Header.css'
 
 export default function Header() {
 
     return (
-        <header>
-            <nav>
-                <Link to="/">Home</Link>&nbsp;&nbsp;&nbsp;
-                <Link to="/create">Create a Guide</Link>&nbsp;&nbsp;&nbsp;
-                <Link to="/guides">Guides</Link>&nbsp;&nbsp;&nbsp;
-                <Link to="/about">About</Link>
+        <header className="header">
+            <nav className="nav">
+                <Link to="/" className="link">
+                    Home
+                </Link>
+                <Link to="/create" className="link">
+                    Create a Guide
+                </Link>
+                <Link to="/guides" className="link">
+                    Guides
+                </Link>
+                <Link to="/about" className="link">
+                    About
+                </Link>
             </nav>
         </header>
     )

@@ -1,4 +1,5 @@
 import GuideItem from "./GuideItem";
+import './GuideList.css';
 
 export default function GuideList({ guides, setGuides }) {
 
@@ -12,7 +13,7 @@ export default function GuideList({ guides, setGuides }) {
     }
 
     return (
-        <div>
+        <div className="guide-list">
             {guides.map(guide => (
                 <GuideItem 
                     key={guide.id}
