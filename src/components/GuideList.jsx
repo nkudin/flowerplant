@@ -12,6 +12,13 @@ export default function GuideList({ guides, setGuides, showActions = true }) {
         }
     }
 
+    // Debug output to help diagnose rendering issues
+    console.log('GuideList received guides:', guides);
+
+    if (!guides || guides.length === 0) {
+        return <div className="guide-list"><p>No guides to show.</p></div>;
+    }
+
     return (
         <div className="guide-list">
             {guides.map(guide => (
