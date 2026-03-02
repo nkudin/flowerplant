@@ -1,7 +1,7 @@
 import './Footer.css'
 
 
-// This code uses <span> to separate the words considered "labels" away from the rest of the code. this allows me to do some cute coloring with them :)
+// This code uses <span> to separate the words considered "labels" away from the rest of the code. this allows me to do some cute formatting with them :)
 
 export default function Footer() {
 

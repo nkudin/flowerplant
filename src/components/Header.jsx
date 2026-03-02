@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import Searchfield from "./Searchfield";
 import './Header.css'
 
 export default function Header() {

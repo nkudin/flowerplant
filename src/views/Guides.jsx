@@ -70,9 +70,7 @@ function Guides() {
     localStorage.setItem("guides", JSON.stringify(guides));
   }, [guides]);
 
-  // Sort the guides in alphabetical order
-  // toSorted is relatively new and may not exist in all browsers/environments
-  // fall back to a copy-and-sort so the original array isn't modified.
+  // Sort the guides in alphabetical order by name, ignoring case and accents
   const sortedGuides = [...guides].sort((a,b) =>
     a.name.localeCompare(b.name, "en", { sensitivity: "base" })
   );

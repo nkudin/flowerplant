@@ -4,7 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 export default function Update() {
   const [id] = useState();
 
-  // Initialize state with data from localStorage or an empty array
+  // Initialize state with data from localStorage
   const [guides, setGuides] = useState(() => {
     const savedGuides = localStorage.getItem("guides");
     return savedGuides ? JSON.parse(savedGuides) : [];
@@ -53,7 +53,7 @@ export default function Update() {
 );
 
   // After update, the user is redirected to the default page.
-  navigate("/");
+  navigate("/guides");
 }
 
 return (
